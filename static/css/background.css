@@ -1,0 +1,57 @@
+.background-block > .light-block,
+.background-block > .light-block > .light {
+	position: absolute;
+
+	z-index: 1000;
+}
+
+
+.background-block {
+	position: fixed;
+	top: 0;
+
+	width: 100%;
+	height: 100%;
+}
+
+.light-block:hover > .light {
+	transition: 0s;
+}
+
+.light-block:nth-child(7n):hover > .light {
+	background: #ff00ff;
+	box-shadow: 0px 0px 8px #ff00ff;
+}
+.light-block:nth-child(7n + 1):hover > .light {
+	background: #ff0000;
+	box-shadow: 0px 0px 8px #ff0000;
+}
+.light-block:nth-child(7n + 2):hover > .light {
+	background: #ff9900;
+	box-shadow: 0px 0px 8px #ff9900;
+}
+.light-block:nth-child(7n + 3):hover > .light {
+	background: #ffff00;
+	box-shadow: 0px 0px 8px #ffff00;
+}
+.light-block:nth-child(7n + 4):hover > .light {
+	background: #66ff33;
+	box-shadow: 0px 0px 8px #66ff33;
+}
+.light-block:nth-child(7n + 5):hover > .light {
+	background: #00ffff;
+	box-shadow: 0px 0px 8px #00ffff;
+}
+.light-block:nth-child(7n + 6):hover > .light {
+	background: #3333ff;
+	box-shadow: 0px 0px 8px #3333ff;
+}
+
+.light {
+	background: black;
+	border-radius: 700px;
+}
+
+.light:not(:hover) {
+	transition: 2s;
+}
