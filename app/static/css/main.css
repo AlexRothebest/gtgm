@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+
+	background: black;
+}
+
+section {
+	position: relative;
+	left: 15%;
+	top: 10%;
+
+	width: 70%;
+
+	color: white;
+
+	font-size: 1.2em;
+}
+
+section h1,
+section h3 {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+section table,
+section table th,
+section table td {
+	border: 1px solid white;
+
+	border-collapse: collapse;
+}
+
+section table th,
+section table td {
+	padding: 10px;
+}
+
+
+a[href] {
+	text-decoration: none;
+}
+
+
+.rounded-image {
+	margin: 20px;
+
+	border-radius: 50%;
+
+	shape-outside: circle();
+}
+
+#javascript-image {
+	margin: 20px;
+
+	shape-outside: polygon(50% -6%, 105% 23%, 105% 77%, 50% 106%, -5% 77%, -5% 23%);
+}
+
+#python-image,
+#javascript-image {
+	float: right;
+
+	width: 200px;
+	height: 200px;
+}
+
+
+#python-code-image {
+	float: right;
+
+	width: 400px;
+	height: 400px;
+}
+
+
+#guido-image,
+#microsoft-image {
+	float: left;
+
+	margin: 20px;
+
+	width: 200px;
+	height: 200px;
+}
+
+#html-image {
+	float: right;
+
+	width: 200px;
+	height: 200px;
+
+	shape-outside: polygon(0 -3%, 100% -3%, 91% 94%, 50% 104%, 9% 94%);
+
+	margin: 20px;
+}

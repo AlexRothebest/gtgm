@@ -1,0 +1,119 @@
+form {
+	position: absolute;
+    left: 50%;
+    margin-top: 30px;
+	transform: translateX(-50%);
+
+	border: none;
+}
+
+
+form > small {
+	display: block;
+}
+
+
+form > small.error {
+	position: absolute;
+	margin-top: -20px;
+
+	color: red;
+}
+
+
+form > legend {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	font-size: 2em;
+
+	margin-bottom: 18px;
+}
+
+
+form > input[type='text'],
+form > input[type='email'],
+form > input[type='password'] {
+	display: block;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+
+	height: 25px;
+	width: 250px;
+
+	border: 1px solid black;
+	border-radius: 5px;
+
+	font-size: 18px;
+	font-weight: 100;
+
+	transition: .3s;
+	outline: none;
+}
+
+form > input:hover,
+form > label:hover {
+	transform: scale(1.03);
+}
+
+form > input[type='checkbox'],
+form > label[for='remember-me'] {
+	cursor: pointer;
+
+	outline: none;
+}
+
+form > button {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+	display: block;
+
+	width: 90px;
+	height: 40px;
+
+	margin-top: 20px;
+
+	background: transparent;
+
+	border: 1px solid red;
+	border-radius: 5px;
+
+	color: red;
+
+	transition: background-color .3s, color .3s;
+
+	cursor: pointer;
+
+	outline: none;
+}
+form > button:hover {
+	background: red;
+
+ 	color: black;
+}
+
+
+form > button > a {
+	display: inline-block;
+}
+
+
+form > button > i {
+	margin-left: 7px;
+}
+
+
+.fa-eye-slash,
+.fa-eye {
+	position: absolute;
+	padding: 10px;
+
+	transform: translate(243px, -63px);
+
+	color: black;
+
+	cursor: pointer;
+}

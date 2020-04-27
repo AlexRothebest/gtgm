@@ -1,1 +1,5 @@
-finally
+env
+
+.env
+
+__pycache__
