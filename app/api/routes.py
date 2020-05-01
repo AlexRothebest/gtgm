@@ -14,12 +14,14 @@ def api_login():
         password = request.form.get('password')
         remember_me = request.form.get('rememberMe')
 
-        user = User.query.filter_by(or_(
-            username=username,
-            email=username
-        )).first_or_404()
+        user = User.query.filter(
+            or_(
+                User.username.in_([username]),
+                User.email.in_([username])
+            )
+        ).first_or_404()
 
-        if bcrypt.check_password_hash(user.password):
+        if bcrypt.check_password_hash(user.password_hash, password):
             login_user(user, remember=remember_me)
 
             result = {
@@ -27,11 +29,13 @@ def api_login():
             }
         else:
             result = {
-                'success': False
+                'success': False,
+                'message': 'Wrong username or password'
             }
     except:
         result = {
-            'success': False
+            'success': False,
+            'message': 'Server error occured'
         }
 
     return jsonify(result)
@@ -84,7 +88,8 @@ def api_register():
                 }
     except:
         result = {
-            'success': False
+            'success': False,
+            'message': 'Server error occured'
         }
 
     return jsonify(result)

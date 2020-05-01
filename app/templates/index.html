@@ -4,24 +4,26 @@
 	<title>Home</title>
 
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="/static/js/background.js"></script>
+
+
 	<link rel='stylesheet' type='text/css' href='/static/css/main.css'>
+	<link rel='stylesheet' type='text/css' href='/static/css/home.css'>
 	<link rel='stylesheet' type='text/css' href='/static/css/navbar.css'>
 	<link rel='stylesheet' type='text/css' href='/static/css/footer.css'>
 	<link rel='stylesheet' type='text/css' href='/static/css/background.css'>
 </head>
 <body>
-	<nav>
-		<ul>
-			<div class='nav-left'>
-				<li><a href='/python'>Python</a></li>
-				<li><a href='/javascript'>JavaScript</a></li>
-				<li><a href='/html'>HTML</a></li>
-			</div>
-			<div class='nav-right'>
-				<li><a href='/login'>Login</a></li>
-				<li><a href='/registration'>Registration</a></li>
-			</div>
-		</ul>
-	</nav>
+	{% include 'components/navbar.html' %}
+
+
+	<div class='background-block'></div>
+
+
+	<section>
+		<h1>Welcome!</h1>
+	</section>
 </body>
 </html>

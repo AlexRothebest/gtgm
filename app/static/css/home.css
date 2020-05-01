@@ -1,0 +1,7 @@
+section > h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 5em;
+}

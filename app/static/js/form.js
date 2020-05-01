@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$('.fa-eye-slash').removeClass('fa-eye-slash');
 
 			$('.fa-eye').css({
-				'transform': 'translate(244px, -63px)'
+				'transform': 'translate(244px, -73px)'
 			});
 
 			$(this).parent().find('input[name="password"], input[name="confirm-password"]').attr('type', 'text');
@@ -22,7 +22,7 @@ $(document).ready(function() {
 			$('.fa-eye').removeClass('fa-eye');
 
 			$('.fa-eye-slash').css({
-				'transform': 'translate(243px, -63px)'
+				'transform': 'translate(243px, -73px)'
 			});
 
 			$(this).parent().find('input[name="password"], input[name="confirm-password"]').attr('type', 'password');

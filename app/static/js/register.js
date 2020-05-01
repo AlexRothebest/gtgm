@@ -15,13 +15,19 @@ function getCookie(name) {
 
 
 $(document).ready(function() {
-    $('#login-form').submit(function(event) {
+    $('#register-form').submit(function(event) {
         event.preventDefault();
 
         let data = new FormData(this);
         let username = data.get('username');
         let email = data.get('email');
         let password = data.get('password');
+        let confirmPassword = data.get('confirm-password');
+
+        if (confirmPassword != password) {
+            $('#error-block').text('Passwords don\'t match');
+            return;
+        }
 
         $.ajax({
             url: '/api/register',
@@ -39,7 +45,7 @@ $(document).ready(function() {
                 if (result.success) {
                     location.href = '/'
                 } else {
-                    // $(this).before("<small class='error'>Wrong username or password</small>")
+                    $('#error-block').text(result.message);
                 }
             },
             error: function() {

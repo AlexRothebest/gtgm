@@ -1,0 +1,23 @@
+<nav>
+    <ul>
+        <div class="nav-left">
+            <li><a href="/">Home</a></li>
+            {% if not current_user.is_anonymous %}
+                <li><a href="/archive">Archive</a></li>
+            {% endif %}
+        </div>
+        <div class="nav-right">
+            {% if current_user.is_anonymous %}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Registration</a></li>
+            {% else %}
+                <li><a href="/api/logout">Logout ({{ current_user.username }})</a></li>
+            {% endif %}
+        </div>
+    </ul>
+</nav>
+
+
+<script>
+    $(`nav a[href="${window.location.pathname}"]`).addClass("active");
+</script>

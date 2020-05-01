@@ -20,43 +20,31 @@
 	<script type="text/javascript" src="/static/js/form.js"></script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<div class="nav-left">
-				<li><a href="/python">Python</a></li>
-				<li><a href="/javascript">JavaScript</a></li>
-				<li><a href="/html">HTML</a></li>
-			</div>
-			<div class="nav-right">
-				{% if current_user.is_anonymous %}
-					<li><a href="/login">Login</a></li>
-				{% else %}
-					<li><a href="/api/logout">Logout ({{ current_user.username }})</a></li>
-				{% endif %}
-				<li><a href="/register" class="active">Registration</a></li>
-			</div>
-		</ul>
-	</nav>
+	{% include 'components/navbar.html' %}
 
 
 	<div class="background-block"></div>
 	
 
 	<section>
-		<form id="login-form">
-			<small>Username</small>
-			<input type="text" name="username" minlength="4" maxlength="50" required>
+		<form id="register-form">
+			<fieldset>
+				<small>Username</small>
+				<input type="text" name="username" minlength="4" maxlength="50" required>
 
-			<small>Email</small>
-			<input type="email" name="email" minlength="4" maxlength="50" required>
+				<small>Email</small>
+				<input type="email" name="email" minlength="4" maxlength="50" required>
 
-			<small>Password</small>
-			<input type="password" name="password" minlength="4" maxlength="30" required>
-			<i class="fa fa-eye-slash"></i>
+				<small>Password</small>
+				<input type="password" name="password" minlength="4" maxlength="30" required>
+				<i class="fa fa-eye-slash"></i>
 
-			<small>Confirm password</small>
-			<input type="password" name="confirm-password" minlength="4" maxlength="30" required>
-			<i class="fa fa-eye-slash"></i>
+				<small>Confirm password</small>
+				<input type="password" name="confirm-password" minlength="4" maxlength="30" required>
+				<i class="fa fa-eye-slash"></i>
+			</fieldset>
+
+			<small id="error-block"></small>
 
 			<button>Register</button>
 		</form>

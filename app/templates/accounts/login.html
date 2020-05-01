@@ -20,23 +20,7 @@
 	<script type="text/javascript" src="/static/js/form.js"></script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<div class="nav-left">
-				<li><a href="/python">Python</a></li>
-				<li><a href="/javascript">JavaScript</a></li>
-				<li><a href="/html">HTML</a></li>
-			</div>
-			<div class="nav-right">
-				{% if current_user.is_anonymous %}
-					<li><a href="/login" class="active">Login</a></li>
-				{% else %}
-					<li><a href="/api/logout" class="active">Logout ({{ current_user.username }})</a></li>
-				{% endif %}
-				<li><a href="/register">Registration</a></li>
-			</div>
-		</ul>
-	</nav>
+	{% include 'components/navbar.html' %}
 
 
 	<div class="background-block"></div>
@@ -44,12 +28,16 @@
 
 	<section>
 		<form id="login-form">
-			<small>Username or email</small>
-			<input type="text" name="username" minlength="4" maxlength="50" required>
+			<fieldset>
+				<small>Username or email</small>
+				<input type="text" name="username" minlength="4" maxlength="50" required>
 
-			<small>Password</small>
-			<input type="password" name="password" minlength="4" maxlength="30" required>
-			<i class="fa fa-eye-slash"></i>
+				<small>Password</small>
+				<input type="password" name="password" minlength="4" maxlength="30" required>
+				<i class="fa fa-eye-slash"></i>
+			</fieldset>
+
+			<small id="error-block"></small>
 
 			<label for="remember-me">
 				<input type="checkbox" name="remember-me" value="remember-me" id="remember-me">

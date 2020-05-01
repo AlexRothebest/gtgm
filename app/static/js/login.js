@@ -39,7 +39,7 @@ $(document).ready(function() {
                 if (result.success) {
                     location.href = '/'
                 } else {
-                    // $(this).before("<small class='error'>Wrong username or password</small>")
+                    $('#error-block').text(result.message);
                 }
             },
             error: function() {

@@ -8,20 +8,12 @@ form {
 }
 
 
-form > small {
+form small {
 	display: block;
 }
 
-
-form > small.error {
-	position: absolute;
-	margin-top: -20px;
-
-	color: red;
-}
-
-
-form > legend {
+/*
+fieldset > legend {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
@@ -30,13 +22,11 @@ form > legend {
 
 	margin-bottom: 18px;
 }
+*/
 
-
-form > input[type='text'],
-form > input[type='email'],
-form > input[type='password'] {
-	display: block;
-	margin-bottom: 20px;
+fieldset > input:not([type='checkbox']) {
+	display: table;
+	margin-bottom: 30px;
 	padding: 10px 20px;
 
 	height: 25px;
@@ -52,19 +42,28 @@ form > input[type='password'] {
 	outline: none;
 }
 
-form > input:hover,
-form > label:hover {
+
+form fieldset {
+	margin-bottom: 6px;
+	padding: 0;
+
+	border: none;
+}
+
+fieldset input:hover,
+form label:hover {
 	transform: scale(1.03);
 }
 
-form > input[type='checkbox'],
-form > label[for='remember-me'] {
-	cursor: pointer;
+fieldset input[type='checkbox'],
+form label[for='remember-me'] {
+	margin-top: 40px;
 
+	cursor: pointer;
 	outline: none;
 }
 
-form > button {
+form button {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -89,19 +88,19 @@ form > button {
 
 	outline: none;
 }
-form > button:hover {
+form button:hover {
 	background: red;
 
  	color: black;
 }
 
 
-form > button > a {
+form button a {
 	display: inline-block;
 }
 
 
-form > button > i {
+form button i {
 	margin-left: 7px;
 }
 
@@ -111,9 +110,16 @@ form > button > i {
 	position: absolute;
 	padding: 10px;
 
-	transform: translate(243px, -63px);
+	transform: translate(243px, -73px);
 
 	color: black;
 
 	cursor: pointer;
+}
+
+#error-block {
+	position: absolute;
+	transform: translate(10px, -26px);
+
+	color: red;
 }
