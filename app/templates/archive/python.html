@@ -44,14 +44,10 @@
 	<div class="background-block"></div>
 
 
-	<a href="/archive">
-		<div class="back-arrow">
-			<img src="/static/images/back-arrow.svg">
-		</div>
-	</a>
+	{% include 'components/back_to_archive_button.html' %}
 
 
-	<section>
+	<main>
 		<div id="python-block">
 			<h1 id="python">Today I'd like to introduce you... Python!</h1>
 
@@ -221,7 +217,7 @@
 				^a Not directly accessible by name.
 			</p>
 		</div>
-	</section>
+	</main>
 
 
 	{% include 'components/archive_footer.html' %}

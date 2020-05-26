@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Where am I?</title>
+
+
+    <script type="text/javascript">
+        var createMap = () => setTimeout(() => {
+            navigator.geolocation.getCurrentPosition((position) => {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                var position = new google.maps.LatLng(latitude, longitude);
+                var props = {
+                    center: position,
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+
+                var map = new google.maps.Map(document.getElementById('google-map'), props);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: position
+                });
+            }, () => null);
+        }, 3000);
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsMbYDViqTZ9-wNpmYlFSIeFW8MKKC82I&callback=createMap" type="text/javascript"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <script type="text/javascript" src="/static/js/background.js"></script>
+    
+
+    <link rel='stylesheet' type='text/css' href='/static/css/main.css'>
+	<link rel='stylesheet' type='text/css' href='/static/css/navbar.css'>
+</head>
+<body>
+    {% include 'components/navbar.html' %}
+
+
+	<div class='background-block'></div>
+
+
+	<main>
+        <div id="google-map" class="main-content-block">
+            <div>
+                <h1>Loading map...</h1>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

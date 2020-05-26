@@ -4,7 +4,7 @@ body {
 	background: black;
 }
 
-section {
+main {
 	position: relative;
 	left: 15%;
 	top: 10%;
@@ -16,24 +16,40 @@ section {
 	font-size: 1.2em;
 }
 
-section h1,
-section h3 {
+.main-content-block {
+	display: flex;
+
+	visibility: hidden;
+
+	justify-content: center;
+	align-items: center;
+
+	width: 90%;
+
+    margin: 5%;
+
+    border: none;
+}
+
+
+main h1,
+main h3 {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
 
-section table,
-section table th,
-section table td {
+main table,
+main table th,
+main table td {
 	border: 1px solid white;
 
 	border-collapse: collapse;
 }
 
-section table th,
-section table td {
+main table th,
+main table td {
 	padding: 10px;
 }
 

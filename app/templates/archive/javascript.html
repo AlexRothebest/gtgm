@@ -40,14 +40,10 @@
 	<div class="background-block"></div>
 
 
-	<a href="/archive">
-		<div class="back-arrow">
-			<img src="/static/images/back-arrow.svg">
-		</div>
-	</a>
+	{% include 'components/back_to_archive_button.html' %}
 
 
-	<section>
+	<main>
 		<h1 id="javascript">And the next - thing that makes the hole world work. JavaScript!</h1>
 
 		<p>JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</p>
@@ -134,7 +130,7 @@
 		<p>jQuery is the most popular library, used by over 70% of websites.</p>
 
 		<p>The Angular framework was created by Google for its web services; it is now open source and used by other websites. Likewise, Facebook created the React framework for its website and later released it as open source; other sites, including Twitter, now use it. There are other open source frameworks in use, such as Backbone.js and Vue.js.</p>
-	</section>
+	</main>
 
 
 	{% include 'components/archive_footer.html' %}

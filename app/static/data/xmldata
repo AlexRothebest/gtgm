@@ -1,0 +1,29 @@
+<archive path="/archive">
+    <group>
+        <image width="961">/static/images/map.png</image>
+
+        <articles>
+            <article>
+                <link>/python</link>
+                <area>
+                    <shape>rect</shape>
+                    <coords>90, 0, 220, 130</coords>
+                </area>
+            </article>
+            <article>
+                <link>/javascript</link>
+                <area>
+                    <shape>rect</shape>
+                    <coords>410, 0, 540, 130</coords>
+                </area>
+            </article>
+            <article>
+                <link>/html</link>
+                <area>
+                    <shape>rect</shape>
+                    <coords>745, 0, 865, 130</coords>
+                </area>
+            </article>
+        </articles>
+    </group>
+</archive>
