@@ -94,9 +94,9 @@ nav ul div li.dropdown span:hover:not(:first-child) {
 
 nav ul div li a.active,
 nav ul div li a.active:hover {
-	color: #0e00d4 !important;
+	color: #1100ff !important;
 }
 
 nav ul div li a.active:hover {
-	text-shadow: 0 0 3px #0e00d4 !important;
+	text-shadow: 0 0 3px #1100ff !important;
 }
